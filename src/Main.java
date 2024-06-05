@@ -1,15 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        String product1 = "Computer";
+        String product2 = "Office desk";
+
+        int age = 30;
+        int code = 5290;
+        char gender = 'F';
+
+        double price1 = 2100.0;
+        double price2 = 650.50;
+        double measure = 53.234567;
+
+        System.out.println("Products:");
+        System.out.printf("%s, which price is $ %.2f\n", product1, price1);
+        System.out.printf("%s, which price is $ %.2f\n\n", product2, price2);
+
+        System.out.printf("Record: %d years old, code %d and gender %c\n\n", age, code, gender);
+
+        System.out.printf("Measure with eight decimal places: %.8f\n", measure);
+        System.out.printf("Rounded (three decimal places): %.3f\n", measure);
+        Locale.setDefault(Locale.US);
+        System.out.printf("US decimal point: %.3f\n", measure);
+
     }
 }
